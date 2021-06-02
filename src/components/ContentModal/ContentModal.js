@@ -130,7 +130,7 @@ export default function TransitionsModal({ children, media_type, id }) {
                     {content.overview}
                   </span>
 
-                  <div className="Carousel">
+                  <div className={}>
                     <Carousel id={id} media_type={media_type} />
                   </div>
 
