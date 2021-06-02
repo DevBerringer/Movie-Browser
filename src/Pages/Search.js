@@ -37,7 +37,6 @@ import {
         );
         setContent(data.results);
         setNumOfPages(data.total_pages);
-        console.log(content);
       } catch (error) {
         console.error(error);
       }
@@ -98,7 +97,8 @@ import {
             ))}
           {searchText &&
             (content.length === 0) &&
-            (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)}
+                (numOfPages === 0) &&
+                (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)}
         </div>
         {numOfPages > 1 && (
           <CustomPagination setPage={setPage} numOfPages={numOfPages} />
