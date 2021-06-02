@@ -1,20 +1,19 @@
-import './App.css';
-import BottomNav from './components/BottomNav';
-import Header from './components/Header';
-import Trending from './Pages/Trending';
-import Movies from './Pages/Movies';
-import Series from './Pages/Series';
-import Search from './Pages/Search';
+import "./App.css";
+import BottomNav from "./components/Navigation/BottomNav";
+import Header from "./components/Navigation/Header";
+import Trending from "./Pages/Trending";
+import Movies from "./Pages/Movies";
+import Series from "./Pages/Series";
+import Search from "./Pages/Search";
 import { Switch, Route } from "react-router-dom";
-import { Container } from '@material-ui/core';
-
+import { Container } from "@material-ui/core";
 
 function App() {
   return (
     <>
-    <Header />
+      <Header />
       <div className="app bg-dark text-light ">
-      <Container>
+        <Container>
           <Switch>
             <Route path="/" component={Trending} exact />
             <Route path="/movies" component={Movies} />
@@ -23,7 +22,7 @@ function App() {
           </Switch>
         </Container>
       </div>
-    <BottomNav />
+      <BottomNav />
     </>
   );
 }
